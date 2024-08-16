@@ -1,8 +1,7 @@
 body {
   font-size: 15px;
-
-  /*  *sticky header styled with transparency */
 }
+/*  *sticky header styled with transparency */
 header {
   height: 10px;
   padding: 0px;
