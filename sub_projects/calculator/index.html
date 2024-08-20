@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a class="headerlogo" href="/index.html">SAM ALI</a>
+      </div>
+      <ul class="top-links">
+        <li id="about"><a href="../../pages/about.html">About</a></li>
+        <li><a href="../../pages/Company_info.html">Company Info</a></li>
+        <li><a href="../../pages/shop.html">Shop</a></li>
+      </ul>
+    </header>
+    <nav class="menu">
+      <button aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        Games
+      </button>
+      <ul id="menu-list">
+        <li>
+          <a href="../calculator/Calculator/index.html">Calculator</a>
+        </li>
+        <li>
+          <a href="index.html">Etch-A-Sketch</a>
+        </li>
+        <li>
+          <a href="../JavaScriptProject-Rock-paper-scissors/index.html"
+            >Rock, Paper, Scissors</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <div class="container">
+        <div id="output">0</div>
+        <div class="keypad">
+          <div class="operatorRow">
+            <!--1st row-->
+            <button class="key--operator" data-action="add" id="+">+</button>
+            <button class="key--operator" data-action="subtract" id="-">
+              -
+            </button>
+            <button class="key--operator" data-action="multiply" id="x">
+              x
+            </button>
+            <button class="key--operator" data-action="divide" id="/">/</button>
+          </div>
+          <div class="numberPad">
+            <!--2nd row numbers and = sign-->
+            <div class="number-pad">
+              <!-- Col 1 (Nums, . , AC) -->
+              <div>
+                <!-- Row 1 Nums -->
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+              </div>
+              <div>
+                <!-- Row 2 Nums -->
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+              </div>
+              <div>
+                <!-- Row 3 Nums -->
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+              </div>
+              <div>
+                <!-- Row 4 Other -->
+                <button>0</button>
+                <button data-action="decimal" id="decimal-button">.</button>
+                <button data-action="clear" id="clear">AC</button>
+              </div>
+            </div>
+            <div class="equals">
+              <!--col 2 = sign-->
+              <button data-action="calculate" id="=" class="equal-button">
+                =
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

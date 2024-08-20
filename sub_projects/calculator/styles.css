@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #bff098, #6fd6ff);
+  height: 100vh;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 100px;
+  border: none;
+  color: rgb(72, 80, 84);
+}
+.container {
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 13px 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(209, 209, 209);
+}
+.container #output {
+  height: 100px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  font-size: 60px;
+  color: rgb(59, 72, 76);
+  max-width: 221px;
+  overflow: hidden;
+}
+
+.keypad .operatorRow {
+  display: flex;
+  gap: 7px;
+}
+
+.operatorRow button:hover {
+  filter: brightness(80%);
+  transition: 0.1s;
+}
+
+.operatorRow button:active {
+  filter: brightness(90%);
+  font-size: 18px;
+}
+
+.keypad .operatorRow button {
+  background-color: #d3dde5;
+}
+
+.keypad .numberPad {
+  display: flex;
+  margin-top: 7px;
+}
+
+.number-pad div {
+  display: flex;
+  gap: 7px;
+}
+.number-pad button:hover {
+  filter: brightness(80%);
+  transition: 0.1s;
+}
+
+.number-pad button:active {
+  filter: brightness(90%);
+  font-size: 18px;
+}
+
+.number-pad div:not(:last-child) {
+  margin-bottom: 7px;
+}
+.equals {
+  display: flex;
+  align-items: stretch;
+}
+
+.equal-button {
+  margin-left: 7px;
+  background-color: #bff098;
+  height: 100%;
+}
+
+.equals:hover {
+  filter: brightness(80%);
+}
+
+.equals:active {
+  font-size: 18px;
+  filter: brightness(90%);
+}
+
+.is-depressed {
+  filter: brightness(50%);
+}
