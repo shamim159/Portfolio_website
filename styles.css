@@ -55,6 +55,15 @@ button {
   padding: 10px 20px;
 }
 
+a {
+  transition: 0.5s;
+}
+
+a:hover {
+  letter-spacing: 0.25em;
+  opacity: 0.8;
+}
+
 img {
   max-width: 100%;
 }

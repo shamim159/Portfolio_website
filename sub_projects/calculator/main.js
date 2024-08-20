@@ -1,6 +1,21 @@
+//yellow nav
+const navButton = document.querySelector("button[aria-expanded]");
+
+function toggleNav({ target }) {
+  const expanded = target.getAttribute("aria-expanded") === "true" || false;
+  navButton.setAttribute("aria-expanded", !expanded);
+}
+
+navButton.addEventListener("click", toggleNav);
+
 //const num1 = parseInt(prompt("please select a number"));
 //const operator = prompt("please select an operator");
 //const num2 = parseInt(prompt("please select the second number"));
+
+const operatorPlus = document.getElementById("+");
+const operatorMinus = document.getElementById("-");
+const operatorTimes = document.getElementById("x");
+const operatorDivide = document.getElementById("/");
 
 //operator functions
 const operate = (n1, operator, n2) => {
@@ -64,15 +79,24 @@ keys.addEventListener("click", (e) => {
       const secondValue = displayedNum;
 
       output.textContent = operate(firstValue, operator, secondValue);
+
+      operatorPlus.classList.remove("is-depressed");
+      operatorMinus.classList.remove("is-depressed");
+      operatorTimes.classList.remove("is-depressed");
+      operatorDivide.classList.remove("is-depressed");
     }
 
     if (action === "clear") {
-      output.textContent = "";
+      output.textContent = "0";
+      operatorPlus.classList.remove("is-depressed");
+      operatorMinus.classList.remove("is-depressed");
+      operatorTimes.classList.remove("is-depressed");
+      operatorDivide.classList.remove("is-depressed");
     }
   }
 });
 
-//console keypresses
+//console key presses
 keys.addEventListener("click", (e) => {
   const key = e.target;
   const action = key.dataset.action;

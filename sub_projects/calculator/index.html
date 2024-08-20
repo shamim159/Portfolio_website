@@ -19,7 +19,11 @@
       </ul>
     </header>
     <nav class="menu">
-      <button aria-expanded="false" aria-controls="menu-list">
+      <button
+        class="stylingButton"
+        aria-expanded="false"
+        aria-controls="menu-list"
+      >
         <span class="open">☰</span>
         <span class="close">×</span>
         Games
@@ -59,27 +63,35 @@
               <!-- Col 1 (Nums, . , AC) -->
               <div>
                 <!-- Row 1 Nums -->
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
+                <button class="calcButtons">7</button>
+                <button class="calcButtons">8</button>
+                <button class="calcButtons">9</button>
               </div>
               <div>
                 <!-- Row 2 Nums -->
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
+                <button class="calcButtons">4</button>
+                <button class="calcButtons">5</button>
+                <button class="calcButtons">6</button>
               </div>
               <div>
                 <!-- Row 3 Nums -->
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                <button class="calcButtons">1</button>
+                <button class="calcButtons">2</button>
+                <button class="calcButtons">3</button>
               </div>
               <div>
                 <!-- Row 4 Other -->
-                <button>0</button>
-                <button data-action="decimal" id="decimal-button">.</button>
-                <button data-action="clear" id="clear">AC</button>
+                <button class="calcButtons">0</button>
+                <button
+                  class="calcButtons"
+                  data-action="decimal"
+                  id="decimal-button"
+                >
+                  .
+                </button>
+                <button class="calcButtons" data-action="clear" id="clear">
+                  AC
+                </button>
               </div>
             </div>
             <div class="equals">
