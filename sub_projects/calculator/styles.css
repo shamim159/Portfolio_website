@@ -88,6 +88,7 @@ body {
 .wrapper {
   display: grid;
   grid-gap: 20px;
+  min-height: 700px;
 }
 
 /* navigation */
