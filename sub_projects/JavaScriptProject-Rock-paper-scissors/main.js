@@ -15,6 +15,7 @@ const wrapper = document.querySelector(".wrapper");
 const rockButton = document.createElement("button");
 const paperButton = document.createElement("button");
 const scissorsButton = document.createElement("button");
+const resetButton = document.createElement("button");
 const scoreContainer = document.createElement("div");
 const roundSelection = document.createElement("div");
 const roundWinner = document.createElement("div");
@@ -26,14 +27,44 @@ const leagueWinner = document.createElement("h1");
 rockButton.textContent = "rock";
 paperButton.textContent = "paper";
 scissorsButton.textContent = "scissors";
+resetButton.textContent = "RESET";
 
 rockButton.classList.add("webTheme");
 paperButton.classList.add("webTheme");
 scissorsButton.classList.add("webTheme");
+resetButton.classList.add("resetButton");
 
 wrapper.appendChild(rockButton);
 wrapper.appendChild(paperButton);
 wrapper.appendChild(scissorsButton);
+wrapper.appendChild(resetButton);
+
+const reset = () => {
+  rockButton.disabled = false;
+  paperButton.disabled = false;
+  scissorsButton.disabled = false;
+  rockButton.classList.remove("disabled");
+  paperButton.classList.remove("disabled");
+  scissorsButton.classList.remove("disabled");
+  resetButton.classList.remove(".pressReset");
+  scoreContainer.textContent = "";
+  roundSelection.textContent = "";
+  roundWinner.textContent = "";
+  winner.textContent = "";
+  leagueWinner.textContent = "";
+};
+
+const disableButtons = () => {
+  rockButton.disabled = true;
+  paperButton.disabled = true;
+  scissorsButton.disabled = true;
+  rockButton.classList.add("disabled");
+  paperButton.classList.add("disabled");
+  scissorsButton.classList.add("disabled");
+  resetButton.classList.add("pressReset");
+};
+
+resetButton.addEventListener("click", reset);
 
 function getComputerChoice() {
   //computer score generator
@@ -131,6 +162,11 @@ function game() {
   } else if (scorePlayer === 5) {
     leagueWinner.textContent = "WINNER WINNER CHICKEN DINNER!";
     wrapper.appendChild(leagueWinner);
+  }
+  if (scoreComputer == 5) {
+    disableButtons();
+  } else if (scorePlayer == 5) {
+    disableButtons();
   }
 }
 
